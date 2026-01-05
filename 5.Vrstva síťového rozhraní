@@ -1,0 +1,22 @@
+sitove rozhrani neboli fyzicka a spojova v osi
+prevadi data na signal 1,0
+dela ramec
+pouziva mac na prenos v Lan pridava je do ramce
+chyby crc/fcs
+rizeni pristupu k mediu csma/ca(dotaz) csma/cd(bez dotazu/boj)
+protokol ehthernet protokol:
+-urcuje rychlost
+-pouziva mac adresy
+-pracuje s ramci pridava preamble i crc
+-ridi pristup k mediu
+-detekuje chyby
+-zajistuje prenos v Lan
+Arp protokol - prevadi ip na mac funguje tak ze vysle broadcast a rika kdo ma tuhle ip tak posli zpet mac
+mac adresa 48 bit hexadecimal kazdej ji ma jedinecnou 
+wifi ieee 802.11 bezdrat Lan technologie pouziva mac adresy a taky csma/ca ceka jestli na mediu je volno pokud vysle a dojde k kolizi tak se  to pojebe a ceka
+se a pak se zase zkusi vysilat
+zarizeni
+sitova karta nic
+switch L2
+hub
+AP dnes soucast basic routeru spolu s switchem
