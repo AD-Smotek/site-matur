@@ -26,14 +26,25 @@ AP dnes soucast basic routeru spolu s switchem
 fyzicke veci jako kabely a tak
 signaly:
 elektro 
-radio
+elektromagnet vlny
 optik
 
 elektro (coax) hlavne kroucena dvojlinka utp vubec  stp celej stinenej ftp stineno jen celek
 cat 5 100Mb 100MHZ
 cat 5e 1000Mb 250MHZ
-cat 6a 10000Mb 500MHZ
+cat 6a 10000Mb 500MHZ            max 100metru jinak repeater
 cat 7 10000Mb 600-1000MHZ
 rj-45 forma b se pouziva
 koax historie lepsi odolnost a bus sbernice
-optika 
+
+optik
+single mode-dlouhe drazsi wan zluta
+multi mode-levnejsi kratsi lan oranz rychlosti 100Gb/s
+obe imuni vuci ruseni a taky daleko
+konektory lc sc 
+
+elektromagnet vlny
+wifi 802.11b a g n ac ax be   2.4  5.0  6.0 max 46Gb min 11Mb
+bluetooth 2.4
+mobil sit 5g LTE  rychlost 
+nizky rozsah muze byt docela rusen 
