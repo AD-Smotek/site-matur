@@ -1,0 +1,33 @@
+Co je IP adresa (obecně)
+IP adresa je logická adresa zařízení v síti,
+slouží k jednoznačné identifikaci zařízení a k směrování paketů.
+pracuje na síťové vrstvě (L3)
+používá se v protokolu IP
+
+ipv4
+32bitu desitkova soustava rozsah 0-255
+adresa site prvni adresa v siti
+broadcast posledni adresa v siti
+loopback ozkouseni protokol sady 127.0.0.1
+Nat
+
+privatni adresy 
+10.0.0.0 - 10.255.255.255/8 A
+172.16.0.0 - 172.31.255.255/12 B
+192.168.0.0 - 192.168.255.255/16
+
+podsitovani je deleni jedne site na vice siti
+lepsi prehlednost
+mensi broadcast domeny
+lepsi bezpecnost
+efektivní vyuziti adres
+
+| Podsítě          | Rozsah      |
+| ---------------- | ----------- 
+| 192.168.1.0/26   | .1 – .62    |
+| 192.168.1.64/26  | .65 – .126  |  
+| 192.168.1.128/26 | .129 – .190 |
+| 192.168.1.192/26 | .193 – .254 |
+hceme 4 podsite kolik na druhou je 4 2 na 2 takze k masce pricteme to na kolikatou to musime dat
+takze mame 24 normal a k tomu dame dve takze nova maska je 26 a kazda 
+
