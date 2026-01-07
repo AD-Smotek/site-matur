@@ -40,3 +40,11 @@ oddeleno dvojteckami jen jednou muzeme pouzit dvoutecku jako zkratku
 nema broadcast schovava se v multicastu
 deli se na prefix interface id 
 obrovksy pocet adress takze se podsitovani moc nedela 
+
+loop back 127.0.0.0 ipv4 ::1 ipv6
+link local 169.254.0.0/16 FE80::/10 ipv6
+
+FC00::/7 unique local 
+FF00::/8 multi cast
+anycast posle blizsimu priklad jako stejnou adresu jako servery asiie evropa america posle se evrope
+2000::/3 globalni ipv6 adresy
