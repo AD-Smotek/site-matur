@@ -1,0 +1,81 @@
+počítač nebo software, který
+poskytuje služby jiným zařízením (klientům)
+běží nepřetržitě
+je optimalizovaný na výkon, spolehlivost a bezpečnost
+funguje na architekture klient server
+
+Server        	 Běžný PC
+běží 24/7      	 občas vypnutý
+ECC paměti	     běžná RAM
+redundantní      zdroje	jeden zdroj
+RAID disky	     jeden disk
+vzdálená         správa	ne
+
+file server 
+uklada soubory nebo zdili
+centraluje data aby byůi na jednom miste a aby je mel kazdy blizko
+zalohuje data kdyby se to posralo
+rizenu pristupu ne kazdy muze k tem datum
+protokoly
+smb/cifs  windows
+nfs linux
+
+print server 
+spravuje tiskarny
+fronta tisku kdo pujde prvni
+
+web server
+webove stranky
+protokoly http https
+priklady 
+apache
+nginx
+iis
+
+mail server
+odesila 
+stahuje  emaily
+prijima 
+protokoly 
+smtp posila
+pop3 imap prijem
+
+dns server prevadi domenu na ip
+lidi neznaji ip adresu pornhubu
+
+dhcp server 
+prideluje ip adresu masku branu i dns
+mene chyb pak je a jednodussi sprava
+
+database server 
+uklada data aplikaci
+rychle dotazy 
+priklad 
+my sql
+ms sql
+
+authentication server 
+overuje uzivatele jeslti pusti do site
+prihlasovani a jak dlouho jste byli kde
+radius
+
+ftp/sftp
+prenos souboru
+ftp nesifr
+sftp sifr
+
+backup server
+zalohuje data
+
+adresni sluzby
+dns dhcp
+
+sitove
+ftp web mail
+
+bezpecnosti sluzby 
+firewall vpn
+
+server operacni systemy 
+windows server
+Linux ubuntu server
