@@ -1,0 +1,175 @@
+# Bezpečnost počítačových sítí
+
+## Bezpečnost – obecně
+Bezpečnost počítačových sítí je soubor opatření,
+která chrání:
+- **data**
+- **síťová zařízení**
+- **uživatele**
+
+před:
+- neoprávněným přístupem
+- útoky
+- ztrátou nebo zneužitím dat
+
+---
+
+## Základní cíle bezpečnosti (CIA)
+Bezpečnost je založena na třech základních principech:
+
+### Důvěrnost (Confidentiality)
+- data jsou dostupná pouze oprávněným osobám
+- řeší se šifrováním a přístupovými právy
+
+### Integrita (Integrity)
+- data nebyla změněna nebo poškozena
+- kontrolní součty, hash, digitální podpis
+
+### Dostupnost (Availability)
+- služby jsou dostupné, když jsou potřeba
+- ochrana proti výpadkům a DoS útokům
+
+---
+
+## Typy hrozeb
+
+### Pasivní útoky
+- odposlech komunikace
+- sniffing
+- monitoring provozu
+
+### Aktivní útoky
+- DoS / DDoS
+- MITM (Man-in-the-Middle)
+- spoofing
+- malware
+
+---
+
+## Malware
+Škodlivý software, který poškozuje systém nebo data.
+
+Typy:
+- virus
+- červ (worm)
+- trojan
+- ransomware
+- spyware
+
+---
+
+## Síťové útoky
+
+### DoS / DDoS
+- zahlcení služby
+- cílem je nedostupnost
+
+### MITM
+- útočník se vloží mezi komunikující strany
+- čte nebo mění data
+
+### Spoofing
+- podvržení identity (IP, MAC, DNS)
+
+---
+
+## Autentizace, autorizace, účetnictví (AAA)
+
+### Autentizace
+- ověření identity uživatele
+
+### Autorizace
+- určení oprávnění
+
+### Accounting
+- zaznamenávání aktivit
+
+Používá se např. **RADIUS**.
+
+---
+
+## Zabezpečovací mechanismy
+
+### Firewall
+- filtruje síťový provoz
+- blokuje nežádoucí komunikaci
+- pracuje na **L3–L7**
+
+---
+
+### VPN (Virtual Private Network)
+- šifrované spojení přes internet
+- bezpečný přístup do firemní sítě
+
+Typy:
+- IPsec VPN
+- SSL/TLS VPN
+
+---
+
+### Šifrování
+- chrání data před odposlechem
+
+Příklady:
+- TLS
+- IPsec
+- AES
+
+---
+
+### IDS / IPS
+- **IDS** – detekce útoků
+- **IPS** – detekce a blokace útoků
+
+---
+
+## Zabezpečení Wi-Fi
+- WPA2 / WPA3
+- silná hesla
+- vypnutí WPS
+- skrytí SSID (doplňkové)
+
+---
+
+## Zabezpečení přístupu
+- silná hesla
+- dvoufaktorová autentizace (2FA)
+- role a práva uživatelů
+
+---
+
+## Segmentace sítě
+- VLAN
+- oddělení uživatelů a serverů
+- snížení dopadu útoku
+
+---
+
+## Aktualizace a zálohování
+- pravidelné aktualizace
+- zálohy dat
+- ochrana proti ransomwaru
+
+---
+
+## Fyzická bezpečnost
+- uzamčené serverovny
+- přístupové karty
+- kamerové systémy
+
+---
+
+## Bezpečnostní politika
+- pravidla pro uživatele
+- řízení přístupů
+- reakce na incidenty
+
+---
+
+## Shrnutí
+Bezpečnost počítačových sítí je kombinace:
+- technických opatření
+- organizačních pravidel
+- chování uživatelů
+
+Cílem je chránit data, zařízení a služby před hrozbami.
