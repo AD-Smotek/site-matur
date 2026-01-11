@@ -1,81 +1,154 @@
-počítač nebo software, který
-poskytuje služby jiným zařízením (klientům)
-běží nepřetržitě
-je optimalizovaný na výkon, spolehlivost a bezpečnost
-funguje na architekture klient server
+# Server – obecně
 
-Server        	 Běžný PC
-běží 24/7      	 občas vypnutý
-ECC paměti	     běžná RAM
-redundantní      zdroje	jeden zdroj
-RAID disky	     jeden disk
-vzdálená         správa	ne
+## Co je server
+Server je **počítač nebo software**, který:
+- poskytuje služby jiným zařízením (**klientům**)
+- běží **nepřetržitě (24/7)**
+- je optimalizovaný na **výkon, spolehlivost a bezpečnost**
+- funguje na **architektuře klient–server**
 
-file server 
-uklada soubory nebo zdili
-centraluje data aby byůi na jednom miste a aby je mel kazdy blizko
-zalohuje data kdyby se to posralo
-rizenu pristupu ne kazdy muze k tem datum
-protokoly
-smb/cifs  windows
-nfs linux
+---
 
-print server 
-spravuje tiskarny
-fronta tisku kdo pujde prvni
+## Server vs. běžný počítač
 
-web server
-webove stranky
-protokoly http https
-priklady 
-apache
-nginx
-iis
+| Server | Běžný PC |
+|------|---------|
+| běží 24/7 | občas vypnutý |
+| ECC paměti | běžná RAM |
+| redundantní zdroje | jeden zdroj |
+| RAID disky | jeden disk |
+| vzdálená správa | většinou ne |
 
-mail server
-odesila 
-stahuje  emaily
-prijima 
-protokoly 
-smtp posila
-pop3 imap prijem
+---
 
-dns server prevadi domenu na ip
-lidi neznaji ip adresu pornhubu
+# Typy serverů a jejich služby
 
-dhcp server 
-prideluje ip adresu masku branu i dns
-mene chyb pak je a jednodussi sprava
+## File server
+- ukládá a sdílí soubory
+- centralizuje data na jednom místě
+- umožňuje zálohování dat
+- řízení přístupových práv (ne každý má přístup ke všemu)
 
-database server 
-uklada data aplikaci
-rychle dotazy 
-priklad 
-my sql
-ms sql
+### Protokoly:
+- **SMB / CIFS** – Windows
+- **NFS** – Linux / Unix
 
-authentication server 
-overuje uzivatele jeslti pusti do site
-prihlasovani a jak dlouho jste byli kde
-radius
+---
 
-ftp/sftp
-prenos souboru
-ftp nesifr
-sftp sifr
+## Print server
+- spravuje tiskárny v síti
+- řídí **frontu tisku** (kdo tiskne jako první)
+- snižuje zátěž pracovních stanic
 
-backup server
-zalohuje data
+---
 
-adresni sluzby
-dns dhcp
+## Web server
+- poskytuje webové stránky
+- komunikuje pomocí HTTP/HTTPS
 
-sitove
-ftp web mail
+### Protokoly:
+- **HTTP (80)**
+- **HTTPS (443)**
 
-bezpecnosti sluzby 
-firewall vpn
+### Příklady:
+- Apache
+- Nginx
+- IIS (Microsoft)
 
-server operacni systemy 
-windows server
-Linux ubuntu server
+---
+
+## Mail server
+- odesílá, přijímá a ukládá e-maily
+
+### Protokoly:
+- **SMTP** – odesílání e-mailů
+- **POP3** – stažení e-mailů
+- **IMAP** – synchronizace e-mailů
+
+---
+
+## DNS server
+- převádí **doménové jméno na IP adresu**
+- uživatelé si pamatují názvy, ne IP adresy  
+  (např. pornhub.com → IP adresa)
+
+---
+
+## DHCP server
+- automaticky přiděluje:
+  - IP adresu
+  - masku sítě
+  - výchozí bránu
+  - DNS server
+- méně chyb
+- jednodušší správa sítě
+
+---
+
+## Databázový server
+- ukládá data aplikací
+- umožňuje rychlé dotazy a práci s daty
+
+### Příklady:
+- MySQL
+- MS SQL
+
+---
+
+## Autentizační server
+- ověřuje uživatele
+- rozhoduje, kdo má přístup do sítě
+- zaznamenává přihlášení a aktivitu
+
+### Protokol:
+- **RADIUS**
+
+---
+
+## FTP / SFTP server
+- přenos souborů
+
+| Protokol | Vlastnosti |
+|--------|-----------|
+| FTP | nešifrovaný |
+| SFTP | šifrovaný (přes SSH) |
+
+---
+
+## Backup server
+- zálohuje data ze serverů a stanic
+- umožňuje obnovu dat při poruše nebo útoku
+
+---
+
+# Skupiny serverových služeb
+
+## Adresní služby
+- DNS
+- DHCP
+
+## Síťové služby
+- FTP
+- Web
+- Mail
+
+## Bezpečnostní služby
+- Firewall
+- VPN
+
+---
+
+# Serverové operační systémy
+
+- **Windows Server**
+- **Linux**
+  - Ubuntu Server
+  - Debian
+  - CentOS / AlmaLinux
+
+---
+
+# Shrnutí
+Server je základní prvek počítačové sítě,
+který zajišťuje služby, bezpečnost a správu dat
+pro ostatní zařízení v síti.
