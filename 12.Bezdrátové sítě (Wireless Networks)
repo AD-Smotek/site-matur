@@ -1,0 +1,171 @@
+# Bezdrátové sítě (Wireless Networks)
+
+## Bezdrátové sítě – obecně
+Bezdrátové sítě umožňují **přenos dat bez použití kabelů**
+pomocí **elektromagnetických vln**.
+
+Používají se především tam, kde:
+- není možné nebo vhodné použít kabeláž
+- je potřeba mobilita zařízení
+
+Pracují převážně na:
+- **fyzické vrstvě (L1)**
+- **linkové vrstvě (L2)** modelu OSI
+
+---
+
+## Základní vlastnosti bezdrátových sítí
+- přenos pomocí rádiových vln
+- sdílené přenosové médium
+- nižší stabilita než kabel
+- vyšší náchylnost k rušení
+- nutnost zabezpečení
+
+---
+
+## Typy bezdrátových sítí podle rozsahu
+
+### PAN (Personal Area Network)
+- velmi malý dosah
+- propojení osobních zařízení
+
+**Technologie:**
+- Bluetooth
+- ZigBee
+
+**Použití:**
+- sluchátka
+- chytré hodinky
+- IoT zařízení
+
+---
+
+### WLAN (Wireless LAN)
+- bezdrátová lokální síť
+- nejčastěji Wi-Fi
+
+**Použití:**
+- domácnosti
+- školy
+- firmy
+
+---
+
+### WMAN
+- bezdrátová metropolitní síť
+- propojení větších oblastí
+
+**Použití:**
+- poskytovatelé internetu
+
+---
+
+### WWAN
+- bezdrátové sítě s velkým rozsahem
+
+**Technologie:**
+- mobilní sítě (LTE, 5G)
+
+---
+
+## Wi-Fi (IEEE 802.11)
+Wi-Fi je standard pro bezdrátové lokální sítě,
+definovaný organizací **IEEE 802.11**.
+
+---
+
+## Wi-Fi standardy
+
+| Standard | Pásmo | Rychlost |
+|--------|------|----------|
+| 802.11b | 2,4 GHz | 11 Mb/s |
+| 802.11g | 2,4 GHz | 54 Mb/s |
+| 802.11n | 2,4 / 5 GHz | až 600 Mb/s |
+| 802.11ac | 5 GHz | až jednotky Gb/s |
+| 802.11ax (Wi-Fi 6) | 2,4 / 5 GHz | vyšší efektivita |
+| 802.11be (Wi-Fi 7) | 2,4 / 5 / 6 GHz | až desítky Gb/s |
+
+---
+
+## Frekvenční pásma
+- **2,4 GHz**
+  - větší dosah
+  - nižší rychlost
+  - větší rušení
+- **5 GHz**
+  - vyšší rychlost
+  - menší dosah
+  - méně rušení
+- **6 GHz**
+  - velmi vysoké rychlosti
+  - nejmenší rušení
+  - kratší dosah
+
+---
+
+## Přístup k médiu – CSMA/CA
+Bezdrátové sítě používají **CSMA/CA**:
+- zařízení zjišťuje, zda je médium volné
+- snaží se **předcházet kolizím**
+- kolize nelze přímo detekovat
+
+---
+
+## Režimy Wi-Fi
+- **Infrastructure mode**
+  - zařízení se připojují přes **Access Point**
+- **Ad-hoc mode**
+  - zařízení komunikují přímo mezi sebou
+
+---
+
+## Síťová zařízení
+- **Access Point (AP)**
+- bezdrátový router
+- Wi-Fi karta
+- repeater / extender
+
+---
+
+## Zabezpečení bezdrátových sítí
+
+### Šifrování
+- WEP – nebezpečné (nepoužívá se)
+- WPA – zastaralé
+- WPA2 – běžně používané
+- WPA3 – nejbezpečnější
+
+### Autentizace
+- heslo (PSK)
+- RADIUS server (Enterprise)
+
+---
+
+## Výhody bezdrátových sítí
+- mobilita
+- snadná instalace
+- žádné kabely
+
+---
+
+## Nevýhody bezdrátových sítí
+- rušení
+- nižší bezpečnost než kabel
+- nižší stabilita
+- sdílené médium
+
+---
+
+## Bezdrátové sítě v praxi
+- domácí Wi-Fi
+- veřejné hotspoty
+- podnikové sítě
+- IoT zařízení
+
+---
+
+## Shrnutí
+Bezdrátové sítě umožňují přenos dat bez kabelů
+pomocí rádiových vln.
+Nejpoužívanější technologií je Wi-Fi (IEEE 802.11),
+která využívá CSMA/CA a vyžaduje důsledné zabezpečení.
