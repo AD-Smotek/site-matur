@@ -1,1 +1,89 @@
+# Číselné soustavy a kódování
+
+Číselná soustava je způsob zápisu čísel pomocí určité množiny číslic. Každá soustava má svůj základ, který určuje počet používaných číslic. Hodnota číslice závisí na její pozici a váze dané mocninou základu. Počítače pracují výhradně s dvojkovou soustavou.
+
+## Základní pojmy
+- bit – základní jednotka informace, hodnota 0 nebo 1
+- byte – 8 bitů
+- základ soustavy – počet číslic v soustavě
+- váha číslice – hodnota podle pozice číslice
+
+## Druhy číselných soustav
+
+### Desítková soustava
+- základ 10
+- číslice 0–9
+- používá člověk
+
+### Dvojková soustava
+- základ 2
+- číslice 0 a 1
+- používají počítače
+
+### Osmičková soustava
+- základ 8
+- číslice 0–7
+- využití v informatice
+
+### Šestnáctková soustava
+- základ 16
+- číslice 0–9 a A–F
+- běžná v IT (adresy, barvy, MAC)
+
+## Převody mezi soustavami
+
+### Binární → desítková
+Každý bit má váhu odpovídající mocnině čísla 2. Hodnota čísla vznikne součtem vah bitů s hodnotou 1.  
+Příklad: 1011₂ = 11₁₀
+
+### Desítková → binární
+Provádí se opakovaným dělením čísla dvěma a zapisováním zbytků.  
+Příklad: 13₁₀ = 1101₂
+
+### Binární → osmičková
+Binární číslo se rozdělí po třech bitech zprava a každá trojice se převede na číslo 0–7.  
+Příklad: 110101₂ = 65₈
+
+### Binární → hexadecimální
+Binární číslo se rozdělí po čtyřech bitech zprava a každá čtveřice se převede na znak 0–F.  
+Příklad: 11101101₂ = ED₁₆
+
+### Hexadecimální → binární
+Každý hexadecimální znak odpovídá přesně čtyřem bitům.  
+Příklad: 2F₁₆ = 00101111₂
+
+## Kódování informací
+
+Kódování převádí znaky, čísla a symboly do binární podoby srozumitelné pro počítač.
+
+### ASCII
+- 7bitové kódování
+- 128 znaků
+- základní znaky a číslice
+
+### Rozšířené ASCII
+- 8bitové
+- 256 znaků
+
+### Unicode (UTF-8)
+- proměnná délka
+- podporuje všechny světové znaky
+- dnešní standard
+
+Příklad: znak „A“ má kód 65₁₀ = 01000001₂
+
+## Komprese
+Komprese slouží ke zmenšení objemu dat.
+- bezztrátová – ZIP
+- ztrátová – MP3, JPEG  
+Příklad: aaabbb → 3a3b
+
+## Šifrování
+Šifrování chrání data před neoprávněným přístupem.
+- symetrické – AES
+- asymetrické – RSA
+- používá se v HTTPS, SSH
+
+## Shrnutí
+Počítače pracují s binární soustavou. Hexadecimální soustava zjednodušuje zápis binárních dat. Kódování převádí znaky na čísla, komprese šetří místo a šifrování zajišťuje bezpečnost dat.
 
