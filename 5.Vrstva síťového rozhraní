@@ -1,50 +1,175 @@
-sitove rozhrani neboli fyzicka a spojova v osi
-prevadi data na signal 1,0
-podvrstvy llc a mac 
-llc zjisti jaky protokol pouzival nahoze na vrstve a taky logicke spojeni mezi L2 a L3
-mac 
--dela ramec
--pouziva mac na prenos v Lan pridava je do ramce
--chyby crc/fcs
--rizeni pristupu k mediu csma/ca(dotaz) csma/cd(bez dotazu/boj)
-protokol ehthernet protokol:
--urcuje rychlost
--pouziva mac adresy
--pracuje s ramci pridava preamble i crc
--ridi pristup k mediu
--detekuje chyby
--zajistuje prenos v Lan
-Arp protokol - prevadi ip na mac funguje tak ze vysle broadcast a rika kdo ma tuhle ip tak posli zpet mac
-mac adresa 48 bit hexadecimal kazdej ji ma jedinecnou 
-wifi ieee 802.11 bezdrat Lan technologie pouziva mac adresy a taky csma/ca ceka jestli na mediu je volno pokud vysle a dojde k kolizi tak se  to pojebe a ceka
-se a pak se zase zkusi vysilat
-zarizeni
-sitova karta nic
-switch L2
-hub
-AP dnes soucast basic routeru spolu s switchem
-fyzicke veci jako kabely a tak
-signaly:
-elektro 
-elektromagnet vlny
-optik
+# Síťové rozhraní – Fyzická a spojová vrstva (OSI)
 
-elektro (coax) hlavne kroucena dvojlinka utp vubec  stp celej stinenej ftp stineno jen celek
-cat 5 100Mb 100MHZ
-cat 5e 1000Mb 250MHZ
-cat 6a 10000Mb 500MHZ            max 100metru jinak repeater
-cat 7 10000Mb 600-1000MHZ
-rj-45 forma b se pouziva
-koax historie lepsi odolnost a bus sbernice
+---
 
-optik
-single mode-dlouhe drazsi wan zluta
-multi mode-levnejsi kratsi lan oranz rychlosti 100Gb/s
-obe imuni vuci ruseni a taky daleko
-konektory lc sc 
+## Základní charakteristika
 
-elektromagnet vlny
-wifi 802.11b a g n ac ax be   2.4  5.0  6.0 max 46Gb min 11Mb
-bluetooth 2.4
-mobil sit 5g LTE  rychlost 
-nizky rozsah muze byt docela rusen 
+Síťové rozhraní v modelu **TCP/IP** odpovídá:
+- **fyzické vrstvě (L1)**  
+- **spojové vrstvě (L2)** modelu **ISO/OSI**
+
+Zajišťuje:
+- převod dat na signál (0 / 1)
+- přenos dat v rámci **lokální sítě (LAN)**
+
+---
+
+## Spojová vrstva (L2)
+
+Spojová vrstva pracuje s **rámci** a **MAC adresami**  
+a je rozdělena na dvě podvrstvy:
+
+---
+
+### 🔹 Podvrstva LLC (Logical Link Control)
+- zjišťuje, **jaký protokol** je použit ve vyšší vrstvě
+- zajišťuje logické spojení mezi **L2 a L3**
+- identifikace protokolů (např. IP)
+
+---
+
+### 🔹 Podvrstva MAC (Media Access Control)
+- vytváří **rámce**
+- používá **MAC adresy** pro přenos v LAN
+- přidává:
+  - CRC / FCS (kontrola chyb)
+- řídí přístup k přenosovému médiu
+
+---
+
+## Řízení přístupu k médiu
+- **CSMA/CD** – bez dotazu, kolizní (Ethernet – historicky)
+- **CSMA/CA** – s dotazem, prevence kolizí (Wi-Fi)
+
+---
+
+## Ethernet (IEEE 802.3)
+- nejrozšířenější protokol LAN
+- používá **MAC adresy**
+- pracuje s **rámci**
+- přidává:
+  - preambuli
+  - CRC / FCS
+- určuje přenosovou rychlost
+- detekuje chyby
+- zajišťuje přenos dat v LAN
+
+---
+
+## ARP (Address Resolution Protocol)
+- převádí **IP adresu na MAC adresu**
+- funguje pomocí **broadcastu**
+- dotaz: „Kdo má tuto IP adresu?“
+- odpověď: cílové zařízení pošle svou MAC adresu
+
+---
+
+## MAC adresa
+- délka: **48 bitů**
+- zápis: **hexadecimální**
+- každé síťové zařízení má **jedinečnou MAC adresu**
+
+---
+
+## Bezdrátová LAN – Wi-Fi (IEEE 802.11)
+- bezdrátová LAN technologie
+- používá **MAC adresy**
+- využívá **CSMA/CA**
+- zařízení nejdříve zjišťuje, zda je médium volné
+- při kolizi:
+  - čeká náhodný čas
+  - znovu se pokusí vysílat
+
+**Standardy:**
+- 802.11b / g / n / ac / ax / be
+- pásma: 2,4 GHz / 5 GHz / 6 GHz
+- rychlosti: cca **11 Mb/s až 46 Gb/s**
+
+---
+
+## Síťová zařízení
+- síťová karta (NIC)
+- hub
+- switch (L2)
+- access point (AP)
+- dnes často součást domácího routeru
+
+---
+
+## Fyzická vrstva (L1)
+
+Fyzická vrstva zajišťuje:
+- samotný přenos signálu
+- fyzické vlastnosti přenosu
+
+---
+
+### 🔹 Typy signálů
+- elektrické
+- elektromagnetické vlny
+- optické
+
+---
+
+## Elektrický přenos
+
+### Kroucená dvojlinka
+- **UTP** – nestíněná
+- **STP** – každá dvojice stíněná
+- **FTP** – stíněný celý kabel
+
+**Kategorie:**
+- Cat 5 – 100 Mb/s, 100 MHz
+- Cat 5e – 1 Gb/s, 250 MHz
+- Cat 6a – 10 Gb/s, 500 MHz
+- Cat 7 – 10 Gb/s, 600–1000 MHz
+
+➡️ Maximální délka kabelu: **100 m**, jinak je nutný **repeater**
+
+**Konektor:**
+- RJ-45 (zapojení T568B)
+
+---
+
+### Koaxiální kabel
+- historické použití
+- vyšší odolnost proti rušení
+- topologie sběrnice (bus)
+
+---
+
+## Optický přenos
+
+### Single-mode
+- dlouhé vzdálenosti
+- dražší
+- WAN sítě
+- barva: žlutá
+
+### Multi-mode
+- kratší vzdálenosti
+- levnější
+- LAN sítě
+- barva: oranžová
+- rychlosti až **100 Gb/s**
+
+**Vlastnosti:**
+- imunita proti rušení
+- velmi dlouhý dosah
+
+**Konektory:**
+- LC
+- SC
+
+---
+
+## Elektromagnetické vlny
+- Wi-Fi
+- Bluetooth (2,4 GHz)
+- mobilní sítě (LTE, 5G)
+
+**Vlastnosti:**
+- nízký dosah
+- vyšší náchylnost k rušení
+
+---
