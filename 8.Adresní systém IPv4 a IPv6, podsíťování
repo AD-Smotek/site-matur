@@ -1,50 +1,144 @@
-Co je IP adresa (obecně)
-IP adresa je logická adresa zařízení v síti,
-slouží k jednoznačné identifikaci zařízení a k směrování paketů.
-pracuje na síťové vrstvě (L3)
-používá se v protokolu IP
+# IP adresa – obecně
 
-ipv4
-32bitu desitkova soustava rozsah 0-255
-adresa site prvni adresa v siti
-broadcast posledni adresa v siti
-loopback ozkouseni protokol sady 127.0.0.1
-Nat
+## Co je IP adresa
+IP adresa je **logická adresa zařízení v počítačové síti**.
+Slouží k:
+- jednoznačné identifikaci zařízení
+- směrování paketů v síti
 
-privatni adresy 
-10.0.0.0 - 10.255.255.255/8 A
-172.16.0.0 - 172.31.255.255/12 B
-192.168.0.0 - 192.168.255.255/16
+- pracuje na **síťové vrstvě OSI (L3)**
+- používá se v protokolu **IP (Internet Protocol)**
 
-podsitovani je deleni jedne site na vice siti
-lepsi prehlednost
-mensi broadcast domeny
-lepsi bezpecnost
-efektivní vyuziti adres
+---
 
-| Podsítě          | Rozsah      |
-| ---------------- | ----------- 
-| 192.168.1.0/26   | .1 – .62    |
-| 192.168.1.64/26  | .65 – .126  |         toto je fixed ale da se delat i variable a tam se porad meni maska a kolik hostu v jedne podsiti
-| 192.168.1.128/26 | .129 – .190 |         to se dela kolik na n tou tak odectes od 32 a mas masku
-| 192.168.1.192/26 | .193 – .254 |
-hceme 4 podsite kolik na druhou je 4 2 na 2 takze k masce pricteme to na kolikatou to musime dat
-takze mame 24 normal a k tomu dame dve takze nova maska je 26 a kazda 
+# IPv4
 
+## Základní vlastnosti IPv4
+- délka adresy: **32 bitů**
+- zapisuje se v **desítkové soustavě**
+- rozdělená do **4 oktetů (0–255)**  
+  např. `192.168.1.1`
 
-ipv6 proc nedostatek ipv4 
-lepsi zabezpeceni
-jednodusi smerovani zadny nat
-ma 128 bit hexadecimal
-oddeleno dvojteckami jen jednou muzeme pouzit dvoutecku jako zkratku
-nema broadcast schovava se v multicastu
-deli se na prefix interface id 
-obrovksy pocet adress takze se podsitovani moc nedela 
+## Speciální IPv4 adresy
+- **adresa sítě** – první adresa v síti  
+- **broadcast** – poslední adresa v síti (odeslání všem)
+- **loopback** – `127.0.0.1`  
+  slouží k testování TCP/IP protokolové sady
+- **NAT** – překlad privátních adres na veřejnou (IPv4)
 
-loop back 127.0.0.0 ipv4 ::1 ipv6
-link local 169.254.0.0/16 FE80::/10 ipv6
+---
 
-FC00::/7 unique local 
-FF00::/8 multi cast
-anycast posle blizsimu priklad jako stejnou adresu jako servery asiie evropa america posle se evrope
-2000::/3 globalni ipv6 adresy
+## Privátní IPv4 adresy
+Používají se v lokálních sítích, nejsou routovatelné na internet.
+
+- **10.0.0.0 – 10.255.255.255 /8** (třída A)
+- **172.16.0.0 – 172.31.255.255 /12** (třída B)
+- **192.168.0.0 – 192.168.255.255 /16** (třída C)
+
+---
+
+# Podsítování (Subnetting)
+
+## Co je podsítování
+Podsítování je **rozdělení jedné sítě na více menších sítí**.
+
+### Výhody podsítování:
+- lepší přehlednost sítě
+- menší broadcast domény
+- vyšší bezpečnost
+- efektivnější využití IP adres
+
+---
+
+## Příklad – pevné podsítování (FLSM)
+
+Síť: `192.168.1.0/24`  
+Chceme **4 podsítě**:
+
+- 2² = 4 → **přičteme 2 bity k masce**
+- nová maska: **/26**
+
+| Podsítě            | Použitelné adresy |
+|--------------------|------------------|
+| 192.168.1.0/26     | .1 – .62         |
+| 192.168.1.64/26    | .65 – .126       |
+| 192.168.1.128/26   | .129 – .190      |
+| 192.168.1.192/26   | .193 – .254      |
+
+➡️ Každá podsíť má stejný počet hostů.
+
+---
+
+## Variabilní podsítování (VLSM)
+
+- každá podsíť může mít **jinou masku**
+- počet hostů se přizpůsobuje potřebám
+- maska se **neustále mění**
+- používá se v praxi (efektivnější než FLSM)
+
+---
+
+# IPv6
+
+## Proč vzniklo IPv6
+- nedostatek IPv4 adres
+- lepší zabezpečení
+- jednodušší směrování
+- **nepoužívá NAT**
+
+---
+
+## Základní vlastnosti IPv6
+- délka adresy: **128 bitů**
+- zapisuje se **hexadecimálně**
+- oddělená dvojtečkami  
+  např. `2001:0db8:85a3::8a2e:0370:7334`
+
+### Zkracování adres:
+- vynechání nul
+- `::` lze použít **pouze jednou v adrese**
+
+---
+
+## IPv6 – další vlastnosti
+- **nemá broadcast**
+- používá **multicast**
+- adresa se dělí na:
+  - **prefix (síťová část)**
+  - **interface ID (část zařízení)**
+- obrovský počet adres → podsítování se běžně neřeší
+
+---
+
+## Typy IPv6 adres
+
+- **Loopback:**  
+  `::1`
+
+- **Link-local:**  
+  `FE80::/10`  
+  (automaticky vytvořená, komunikace v rámci sítě)
+
+- **Unique local:**  
+  `FC00::/7`  
+  (obdoba privátních IPv4 adres)
+
+- **Multicast:**  
+  `FF00::/8`
+
+- **Anycast:**  
+  stejná adresa na více zařízeních  
+  paket je doručen **nejbližšímu uzlu**  
+  (např. servery v Evropě, Asii, Americe)
+
+- **Globální IPv6 adresy:**  
+  `2000::/3`
+
+---
+
+# Shrnutí
+- IPv4 = 32 bitů, NAT, podsítování
+- IPv6 = 128 bitů, žádný NAT, multicast
+- IP adresa = základ směrování v síti (L3)
+
+---
